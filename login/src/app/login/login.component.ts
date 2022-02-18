@@ -6,16 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  title!:  string;
-  description! : string;
-  createdDate! : Date;
-  snaps! : number;
-  imageUrl! : string;
+  title! : string;
+  userName! : string;
+  password! : string ;
+  data!: string;
   ngOnInit(){
       this.title = "login";
-      this.description = "c'est bon ";
-      this.createdDate = new Date();
-      this.snaps = 6 ;
-      this.imageUrl = "#";
+      this.userName  = "Username";
+      this.password = "password";
+      this.data = ''
   }
 }

@@ -1,5 +1,24 @@
 <div class="login-card">
-    <h1> {{ title }} </h1>
-    <p> pizza , {{ description }} </p>
-    <p [id]="imageUrl"></p>
+    <div class="container-fluid">
+        <div class="title_login"><h1 class="title">{{title.toUpperCase()}}</h1></div>
+        <form action="" class="d-grid
+        ">
+            <div class="form-group m-2 col-12 col-md-10 col-lg-8 row">
+                <input  [(ngModel)]="data" type="text" [name]="userName"  placeholder="Username" class="form-control p-2" required>
+            </div>
+            <div class="form-group m-2 col-12 col-md-10 col-lg-8 row">
+                <input type="text" name="password" id="password" placeholder="Password" class="form-control p-2" required>
+                <label for="password"><a href="" class="nav-link text">Forgot password?</a></label>
+            </div>
+            <div class="form-group m-1 col-12 col-md-10 col-lg-8 row">
+                <input type="submit" [value] ="title.toLocaleUpperCase(title[0])" class="btn btn-primary col-12  pt-2">
+            </div>
+        </form>
+    </div>
+    <div *ngIf="userName==''";else newcomponent>
+        <p>hey</p>
+    </div>
+    <ng-template #newcomponent>
+        <p>I'm here</p>
+    </ng-template>
 </div>
